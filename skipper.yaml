@@ -16,6 +16,8 @@ volumes:
   - /etc/subuid:/etc/subuid
   - /etc/subgid:/etc/subgid
   - /run/lock/lockdev:/run/lock/lockdev
+  - /usr/bin/docker:/usr/bin/docker
+  - /run/docker.sock:/run/docker.sock
 
   # cache
   - $HOME/.cache/go-build:/go/pkg/mod

@@ -4,5 +4,17 @@
         "cpu_architecture": "x86_64",
         "url": "https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/37.20221225.3.0/x86_64/fedora-coreos-37.20221225.3.0-live.x86_64.iso",
         "version": "37.20221225.3.0"
+    },
+    {
+        "openshift_version": "4.13",
+        "cpu_architecture": "x86_64",
+        "url": "https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/38.20231027.3.2/x86_64/fedora-coreos-38.20231027.3.2-live.x86_64.iso",
+        "version": "38.20231027.3.2"
+    },
+    {
+        "openshift_version": "4.14",
+        "cpu_architecture": "x86_64",
+        "url": "https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/39.20231101.3.0/x86_64/fedora-coreos-39.20231101.3.0-live.x86_64.iso",
+        "version": "39.20231101.3.0"
     }
 ]

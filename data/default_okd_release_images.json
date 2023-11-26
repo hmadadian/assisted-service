@@ -3,8 +3,22 @@
         "openshift_version": "4.12",
         "cpu_architecture": "x86_64",
         "cpu_architectures": ["x86_64"],
-        "url": "quay.io/openshift/okd:4.12.0-0.okd-2023-03-18-084815",
-        "version": "4.12.0-0.okd-2023-03-18-084815",
+        "url": "quay.io/openshift/okd:4.12.0-0.okd-2023-04-16-041331",
+        "version": "4.12.0-0.okd-2023-04-16-041331"
+    },
+    {
+        "openshift_version": "4.13",
+        "cpu_architecture": "x86_64",
+        "cpu_architectures": ["x86_64"],
+        "url": "quay.io/openshift/okd:4.13.0-0.okd-2023-10-28-065448",
+        "version": "4.13.0-0.okd-2023-10-28-065448"
+    },
+    {
+        "openshift_version": "4.14",
+        "cpu_architecture": "x86_64",
+        "cpu_architectures": ["x86_64"],
+        "url": "quay.io/openshift/okd:4.14.0-0.okd-2023-11-14-101924",
+        "version": "4.14.0-0.okd-2023-11-14-101924",
         "default": true
     }
 ]

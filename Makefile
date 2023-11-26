@@ -139,8 +139,8 @@ CI ?= false
 VERBOSE ?= false
 REPORTS ?= $(ROOT_DIR)/reports
 GO_TEST_FORMAT = pkgname
-DEFAULT_RELEASE_IMAGES = $(shell (tr -d '\n\t ' < ${ROOT_DIR}/data/default_release_images.json))
-DEFAULT_OS_IMAGES = $(shell (tr -d '\n\t ' < ${ROOT_DIR}/data/default_os_images.json))
+DEFAULT_RELEASE_IMAGES = $(shell (tr -d '\n\t ' < ${ROOT_DIR}/data/default_okd_release_images.json))
+DEFAULT_OS_IMAGES = $(shell (tr -d '\n\t ' < ${ROOT_DIR}/data/default_okd_os_images.json))
 
 # Support all Release/OS images for CI
 ifeq ($(CI), true)
@@ -371,8 +371,8 @@ deploy-ui-on-ocp-cluster:
 create-ocp-manifests:
 	export APPLY_MANIFEST=False && export APPLY_NAMESPACE=False && \
 	export ENABLE_KUBE_API=true && export TARGET=ocp && \
-	export OS_IMAGES="$(subst ",\", $(shell cat $(ROOT_DIR)/data/default_os_images.json | tr -d "\n\t "))" && \
-	export RELEASE_IMAGES="$(subst ",\", $(shell cat $(ROOT_DIR)/data/default_release_images.json | tr -d "\n\t "))" && \
+	export OS_IMAGES="$(subst ",\", $(shell cat $(ROOT_DIR)/data/default_okd_os_images.json | tr -d "\n\t "))" && \
+	export RELEASE_IMAGES="$(subst ",\", $(shell cat $(ROOT_DIR)/data/default_okd_release_images.json | tr -d "\n\t "))" && \
 	export MUST_GATHER_IMAGES="$(subst ",\", $(shell cat $(ROOT_DIR)/data/default_must_gather_versions.json | tr -d "\n\t "))" && \
 	export HW_REQUIREMENTS="$(subst ",\", $(shell cat $(ROOT_DIR)/data/default_hw_requirements.json | tr -d "\n\t "))" && \
 	$(MAKE) deploy-postgres deploy-ocm-secret deploy-s3-secret deploy-service deploy-ui

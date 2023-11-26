@@ -73,25 +73,19 @@ After every change in the API (`swagger.yaml`) the code should be generated and 
 skipper make generate-from-swagger
 ```
 
+### Upload the image to Artifactory
+
+```shell
+make update
+```
+
 ## Testing
 
 More information is available here: [Assisted Installer Testing](docs/dev/testing.md)
 
 ## Update Discovery Image base OS
 
-If you want to update the underlying operating system image used by the discovery iso, follow these steps:
-
-1. Choose the base os image you want to use
-
-   1. RHCOS: <https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/>
-   2. Fedora CoreOS: <https://getfedora.org/en/coreos/download?tab=metal_virtualized&stream=stable>
-
-2. Build the new iso generator image
-
-   ```sh
-   # Example with RHCOS
-   BASE_OS_IMAGE=https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/pre-release/latest/rhcos-4.6.0-0.nightly-2020-08-26-093617-x86_64-live.x86_64.iso make build-assisted-iso-generator-image
-   ```
+Should be changed in Makefile to load from "data" path
 
 ## Deployment
 
